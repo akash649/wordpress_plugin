@@ -1,0 +1,142 @@
+<link rel="stylesheet" href="swiper-bundle.min.css">
+<style>
+  .swiper-slide {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    height: max-content;
+  }
+
+  .swiper-wrapper {
+    height: max-content;
+  }
+
+  .swiper {
+    /* background-color: red; */
+    height: max-content;
+    padding-bottom: 3rem;
+  }
+
+  .swiper-pagination-bullet,
+  .swiper-pagination-bullet-active {
+    width: 10px;
+    height: 15px;
+    background-color: red;
+    border-radius: 0;
+  }
+
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    font-size: 25px !important;
+    font-weight: bold;
+  }
+</style>
+<!-- Swiper -->
+<div class="swiper mySwiper">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <a href="#">
+        <img
+          src="http://localhost/akash%20book%20depot/wp-content/uploads/2023/09/The_Great_Charismatic_Leader_Bangabandhu-Professor_Md._Amzad_Hossain-171b5-218700.png"
+          alt="book">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="#">
+        <img
+          src="http://localhost/akash%20book%20depot/wp-content/uploads/2023/09/Rajnoitik_totto_poriborton_o_dharabahiko-Professor_Dr_Shaukat_Ara_Hossain-8cf6f-260233.jpg"
+          alt="book">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="#">
+        <img
+          src="http://localhost/akash%20book%20depot/wp-content/uploads/2023/09/Poribesh_o_onnoyon_rasthobiggan_bivhag_-Professor_Dr_Mohammad_Nurul_Amin_Bepari-54c5d-260275.jpg"
+          alt="book">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="#">
+        <img
+          src="http://localhost/akash%20book%20depot/wp-content/uploads/2023/09/Bangladesher_Boideshik_Shomporko_rasthob-Professor_Dr_Shaukat_Ara_Hossain-b5085-260264.jpg"
+          alt="book">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="#">
+        <img
+          src="http://localhost/akash%20book%20depot/wp-content/uploads/2023/09/Bangladesger_Asthanio_sorkar_o_polli_unn-Professor_Dr_Shaukat_Ara_Hossain-dfd6b-260255.jpg"
+          alt="book">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="#">
+        <img
+          src="http://localhost/akash%20book%20depot/wp-content/uploads/2023/09/The_Great_Charismatic_Leader_Bangabandhu-Professor_Md._Amzad_Hossain-171b5-218700.png"
+          alt="book">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="#">
+        <img
+          src="http://localhost/akash%20book%20depot/wp-content/uploads/2023/09/Rajnoitik_totto_poriborton_o_dharabahiko-Professor_Dr_Shaukat_Ara_Hossain-8cf6f-260233.jpg"
+          alt="book">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="#">
+        <img
+          src="http://localhost/akash%20book%20depot/wp-content/uploads/2023/09/Poribesh_o_onnoyon_rasthobiggan_bivhag_-Professor_Dr_Mohammad_Nurul_Amin_Bepari-54c5d-260275.jpg"
+          alt="book">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="#">
+        <img
+          src="http://localhost/akash%20book%20depot/wp-content/uploads/2023/09/Bangladesher_Boideshik_Shomporko_rasthob-Professor_Dr_Shaukat_Ara_Hossain-b5085-260264.jpg"
+          alt="book">
+      </a>
+    </div>
+    <div class="swiper-slide">
+      <a href="#">
+        <img
+          src="http://localhost/akash%20book%20depot/wp-content/uploads/2023/09/Bangladesger_Asthanio_sorkar_o_polli_unn-Professor_Dr_Shaukat_Ara_Hossain-dfd6b-260255.jpg"
+          alt="book">
+      </a>
+    </div>
+  </div>
+  <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+</div>
+<script src="swiper-bundle.min.js"></script>
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 1,
+    spaceBetween: 10,
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    autoplay: {
+      delay: 2000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 2,
+      },
+      992: {
+        slidesPerView: 4,
+
+      },
+    },
+  });
+</script>
