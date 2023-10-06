@@ -1,0 +1,32 @@
+//this is customize shipping cost php function
+function custom_shipping_fee_based_on_items( $cart ) {
+    if ( is_admin() && ! defined( 'DOING_AJAX' ) ) {
+        return;
+    }
+
+    $total_items = $cart->get_cart_contents_count();
+
+    if ( $total_items >= 0 && $total_items <= 10 ) {
+        $shipping_cost = 10;
+    } elseif ( $total_items >= 11 && $total_items <= 20 ) {
+        $shipping_cost = 50;
+    } elseif ( $total_items >= 21 && $total_items <= 30 ) {
+        $shipping_cost = 100;
+    } else {
+        $shipping_cost = 0;
+    }
+
+    // Calculate and add the shipping cost as a fee
+    $cart->add_fee( 'Shipping', $shipping_cost, true, 'standard' );
+}
+add_action( 'woocommerce_cart_calculate_fees', 'custom_shipping_fee_based_on_items' );
+
+
+//this is redirect page
+function redirect_to_login_before_checkout() {
+    if ( ! is_user_logged_in() && is_checkout() ) {
+        wp_redirect( home_url( '/my-account' ) );
+        exit();
+    }
+}
+add_action( 'template_redirect', 'redirect_to_login_before_checkout' );
